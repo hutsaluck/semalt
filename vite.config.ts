@@ -13,7 +13,9 @@ const proxy = {
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  // Repository Pages is published from /semalt/; relative assets also keep
+  // the build usable from previews and other static hosts.
+  base: process.env.GITHUB_ACTIONS === 'true' ? '/semalt/' : './',
   server: { proxy },
   preview: { proxy },
   test: {

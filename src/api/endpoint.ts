@@ -1,3 +1,2 @@
-// The app's host forwards this fixed route to FreeSerp. Its broken CORS headers
-// cannot block same-origin responses (Vite locally, Netlify rewrite in production).
+// Vite locally and Netlify in production forward this route server-side.
 export const API_ENDPOINT = '/api/freeserp';
